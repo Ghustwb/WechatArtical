@@ -2,6 +2,17 @@
 
 Ti在板载端提供了非常丰富的demo，每个demo都提供了输入文件，模型文件。只需要修改config文件运行即可，demo分为python版本和c++版本，C++版本的运行效率会稍微高一些
 
+```shell
+rm -rf build bin lib
+mkdir build
+cmake ..
+make -j2
+cd edge_ai_apps/apps_cpp
+./bin/Release/app_edgeai ../configs/image_classification.yaml
+```
+
+根据yaml定义的配置来运行相对应的demo
+
 #### 配置文件
 
 配置文件通过使用YAML格式来设置参数，配置文件路径为`edge_ai_app/configs`
